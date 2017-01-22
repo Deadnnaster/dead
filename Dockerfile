@@ -8,4 +8,4 @@ RUN apk update \
 WORKDIR /shadowsocks
 
 
-CMD CMD python server.py -c /config.json
+CMD  python server.py -c /config.json
