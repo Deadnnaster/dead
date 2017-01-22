@@ -2,7 +2,7 @@ FROM alpine
 
 ENV SERVER_ADDR 0.0.0.0
 ENV SERVER_PORT 51348
-ENV PASSWORD= 112233
+ENV PASSWORD=
 ENV METHOD      aes-256-cfb
 ENV PROTOCOL    auth_aes128_md5
 ENV OBFS      http_post
@@ -18,4 +18,4 @@ RUN apk update \
 WORKDIR ~/shadowsocks
 
 
-CMD python ~/shadowsocks/server.py -p $SERVER_PORT -k $PASSWORD -m $METHOD  -O $PROTOCOL -o $OBFS
+CMD python ~/shadowsocks/server.py -p $SERVER_PORT -k 112233 -m $METHOD  -O $PROTOCOL -o $OBFS
