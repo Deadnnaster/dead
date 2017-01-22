@@ -5,7 +5,4 @@ RUN apk update \
     && pip install https://github.com/Deadnnaster/shadowsocksr/archive/Deadnnaster-patch-1.zip
 
 
-WORKDIR /shadowsocks
-
-
-CMD  python server.py -c /config.json
+CMD  python /shadowsocks/server.py -c /config.json
