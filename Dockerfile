@@ -15,7 +15,7 @@ RUN apk update \
     && pip install https://github.com/Deadnnaster/shadowsocksr/archive/Deadnnaster-patch-1.zip
 
 
-WORKDIR ~/shadowsocksr-Deadnnaster-patch-1/shadowsocks
+WORKDIR /shadowsocks
 
 
-CMD python ~/shadowsocksr-Deadnnaster-patch-1/shadowsocks/server.py -p $SERVER_PORT -k 112233 -m $METHOD  -O $PROTOCOL -o $OBFS
+CMD python /shadowsocks/server.py -p $SERVER_PORT -k 112233 -m $METHOD  -O $PROTOCOL -o $OBFS
