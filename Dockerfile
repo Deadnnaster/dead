@@ -14,3 +14,9 @@ RUN apk update \
 #WORKDIR ~/shadowsocksr/shadowsocks
 
 ENTRYPOINT ["/usr/bin/ssserver"]
+RUN ssserver { 
+  #-c:/shadowsocks/config.json,
+   -m: aes-256-cfb ,
+   -O: auth_aes128_md5 ,  
+   -o: http_post_compatible 
+  }
